@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Rydes — Verify Email</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <span class="logo-icon">🦄</span>
+            <span class="logo-text">Wild Rydes</span>
+        </a>
+        <div class="navbar-links">
+            <a href="signin.html">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- VERIFY FORM -->
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <span class="logo-emoji">📧</span>
+                <h1>Verify Email</h1>
+                <p>Enter the 6-digit code we sent to your inbox (check spam too!)</p>
+            </div>
+
+            <div class="alert-info">
+                💌 Check your email for a verification code from AWS Cognito and paste it below.
+            </div>
+
+            <form id="verifyForm">
+                <div class="form-group">
+                    <label for="emailInputVerify">Email Address</label>
+                    <input type="email" id="emailInputVerify"
+                        placeholder="you@example.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="codeInputVerify">Verification Code</label>
+                    <input type="text" id="codeInputVerify"
+                        placeholder="123456" required
+                        maxlength="10"
+                        style="font-size:22px; letter-spacing:6px; text-align:center;">
+                </div>
+                <button type="submit" class="btn btn-purple btn-full">Verify &amp; Continue</button>
+            </form>
+
+            <div class="auth-footer" style="margin-top:20px;">
+                Back to <a href="register.html">registration</a> or <a href="signin.html">sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.12/dist/amazon-cognito-identity.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/cognito-auth.js"></script>
+</body>
+</html>
